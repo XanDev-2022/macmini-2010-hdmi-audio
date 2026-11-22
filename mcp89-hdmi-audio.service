@@ -1,0 +1,11 @@
+[Unit]
+Description=HDMI audio for NVIDIA MCP89 / GeForce 320M (nouveau)
+After=systemd-udev-settle.service
+
+[Service]
+ExecStart=/usr/local/sbin/mcp89-hdmi-audio
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
